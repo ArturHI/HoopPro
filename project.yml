@@ -55,9 +55,11 @@ targets:
         SDKROOT: watchos
         SKIP_INSTALL: YES
         LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks"
-        GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_WKCompanionAppBundleIdentifier: com.hooptrack.HoopTrack
-        INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown"
+        # A static Info.plist (not GENERATE_INFOPLIST_FILE) because Xcode's
+        # synthesizer unconditionally force-adds the legacy WKWatchKitApp key
+        # for this product type, which conflicts with WKApplication and makes
+        # watchOS 26 refuse to install the app as a "WatchKit 1.0" app.
+        INFOPLIST_FILE: "HoopTrack Watch App/Info.plist"
         # Clears the legacy WatchKit-2 stub binary source XcodeGen's watchapp2
         # product type still defaults to; without this it collides with our
         # own compiled binary ("Multiple commands produce ... Watch App").

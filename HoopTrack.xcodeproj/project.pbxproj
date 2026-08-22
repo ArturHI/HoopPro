@@ -55,6 +55,7 @@
 		0EEEFD73C235B05C449A78AE /* HoopTrackWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoopTrackWatchApp.swift; sourceTree = "<group>"; };
 		1CCA0C514AB84F603E67255C /* ShotResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotResult.swift; sourceTree = "<group>"; };
 		20E05ED03A0D5A70BF51F41F /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		2B4CB84CE52CE6A8736318D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5C04185C9E761666A1A1429E /* HoopTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoopTrackApp.swift; sourceTree = "<group>"; };
 		78621F9DF076B0507E9D26CC /* HoopTrack.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HoopTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8610980118D01C2613AD6F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 				8C7C5C27EAF69D9E60CD252C /* Assets.xcassets */,
 				DAFE69A7C43A0B69480DA0CF /* ContentView.swift */,
 				0EEEFD73C235B05C449A78AE /* HoopTrackWatchApp.swift */,
+				2B4CB84CE52CE6A8736318D0 /* Info.plist */,
 			);
 			path = "HoopTrack Watch App";
 			sourceTree = "<group>";
@@ -310,9 +312,7 @@
 		8BE0B67189CF0443A64AC825 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.hooptrack.HoopTrack;
+				INFOPLIST_FILE = "HoopTrack Watch App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BINARY_SOURCE_PATH = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hooptrack.HoopTrack.watchkitapp;
@@ -396,9 +396,7 @@
 		C367BB2A18C2FD1F4F631667 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.hooptrack.HoopTrack;
+				INFOPLIST_FILE = "HoopTrack Watch App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BINARY_SOURCE_PATH = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hooptrack.HoopTrack.watchkitapp;
