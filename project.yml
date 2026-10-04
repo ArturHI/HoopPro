@@ -68,6 +68,7 @@ targets:
   HoopTrack Watch App:
     type: application.watchapp2
     platform: watchOS
+    scheme: {}
     deploymentTarget: "11.6.2"
     sources:
       - path: HoopTrack Watch App
