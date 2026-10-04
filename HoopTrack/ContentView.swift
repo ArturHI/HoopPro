@@ -1,26 +1,22 @@
 import SwiftUI
 
+// Placeholder screens: unstyled on purpose. Each one only reads from
+// WorkoutSession / SwiftData and calls WorkoutSession methods.
 struct ContentView: View {
-    @StateObject private var connectivity = ConnectivityManager.shared
+    @ObservedObject private var session = WorkoutSession.shared
 
     var body: some View {
-        VStack(spacing: 16) {
-            Image(systemName: "basketball.fill")
-                .font(.system(size: 56))
-                .foregroundStyle(.orange)
-            Text("HoopTrack")
-                .font(.largeTitle.bold())
-            Label(
-                connectivity.isReachable ? "Watch Connected" : "Watch Not Reachable",
-                systemImage: connectivity.isReachable ? "applewatch.radiowaves.left.and.right" : "applewatch.slash"
-            )
-            .font(.subheadline)
-            .foregroundStyle(connectivity.isReachable ? .green : .secondary)
+        if let workout = session.workout {
+            LiveSessionView(workout: workout)
+        } else if let summary = session.lastSummary {
+            SummaryView(summary: summary)
+        } else {
+            HomeView()
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .modelContainer(for: [Workout.self, ShotEvent.self], inMemory: true)
 }
