@@ -9,26 +9,46 @@
 /* Begin PBXBuildFile section */
 		17BC4645EC9BDF032145DEF6 /* InputSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EA50F5B04D8EA8157B6B4A /* InputSource.swift */; };
 		1820B6A48D1B6F01311269F5 /* ShotResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCA0C514AB84F603E67255C /* ShotResult.swift */; };
+		1BF7E29B467C9825197E2762 /* LiveWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DBF43209F9554837B706F /* LiveWorkout.swift */; };
 		1F8D4D195836413C9177D6CF /* InputSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EA50F5B04D8EA8157B6B4A /* InputSource.swift */; };
+		26659AC41A9AA4DB1ADB7F23 /* StatFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9993BF8DC48879449148F6 /* StatFormat.swift */; };
+		32BB8B029107EE32AC55A190 /* WorkoutSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B01C16A0BF50ECC8F7DCB /* WorkoutSessionTests.swift */; };
+		36EEF54B210E539541EA47F9 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E9EC408AE5BB778DBA7B68 /* SummaryView.swift */; };
 		394F2BA9E2DCD0FB0E8EE5A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB8048C191382C77FFEF104 /* ContentView.swift */; };
+		4D161A8ECF08230386CDF8BE /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DBA1DBB3E6E793B2C3068 /* WorkoutSession.swift */; };
 		56CCFD0B5D6F817B1E18CCE9 /* HoopTrackWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEEFD73C235B05C449A78AE /* HoopTrackWatchApp.swift */; };
 		5A966F0630C994CFBFB530C7 /* ShotEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE34B40264723D2D8E3A17 /* ShotEvent.swift */; };
 		62FB55069DE64C9A86B7A694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8610980118D01C2613AD6F19 /* Assets.xcassets */; };
+		647798458C854DC2CE7EF4E2 /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DBA1DBB3E6E793B2C3068 /* WorkoutSession.swift */; };
 		703F72D76495A7BF6E3C8D6E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E05ED03A0D5A70BF51F41F /* Workout.swift */; };
 		735EFA2FD73A3A8541063E7E /* WorkoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15C45D0C98E9E5625DCAF14 /* WorkoutType.swift */; };
 		762E146DB03DA584E3E87D99 /* HoopTrack Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 02A967000260F47EFD00A52D /* HoopTrack Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7C500A92A93A10F41ECED60B /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142293D4442724FA552B5270 /* ConnectivityManager.swift */; };
+		84D97F74B79BD46E507ECAEF /* SessionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2AACB27D32C29077B42235 /* SessionEvent.swift */; };
 		8DC0F6CE5B7577CD281F9573 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E05ED03A0D5A70BF51F41F /* Workout.swift */; };
+		A2DE92F4EE2BBA102AE8930D /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC40A1D8A0E00CECA73273 /* ConnectivityManager.swift */; };
 		A3A9BCEACB1ACB43CF1ADF9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFE69A7C43A0B69480DA0CF /* ContentView.swift */; };
 		A9BEA013ACE3350BE4026C69 /* HoopTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04185C9E761666A1A1429E /* HoopTrackApp.swift */; };
 		B190A2869C2B91AFF4753411 /* ShotResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCA0C514AB84F603E67255C /* ShotResult.swift */; };
-		E2BDCE6070E4DFF80F821980 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC90AA4BDABEC1A4FC9FF53 /* ConnectivityManager.swift */; };
+		B92AB7A415A34256B9221236 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC40A1D8A0E00CECA73273 /* ConnectivityManager.swift */; };
+		BA9155C59C063236DEF36F4F /* StatFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9993BF8DC48879449148F6 /* StatFormat.swift */; };
+		C101337D65B247AC6A6946D8 /* LiveWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4DBF43209F9554837B706F /* LiveWorkout.swift */; };
+		D0E5CC909DD533E56289F0D5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDD6DC3C10FD8FCC54A8C37 /* HomeView.swift */; };
+		D1E147E513AC0C42EC4BF941 /* WorkoutRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C4637FE31ACFE4292079BA /* WorkoutRecorder.swift */; };
+		DF2373E272844ABCE9F07CCE /* LiveSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27C279211BFC305702F0CF5 /* LiveSessionView.swift */; };
 		E5B453F9B17DDB322CA2A22A /* WorkoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15C45D0C98E9E5625DCAF14 /* WorkoutType.swift */; };
 		FC051FE28CA8257F7E21F6B1 /* ShotEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE34B40264723D2D8E3A17 /* ShotEvent.swift */; };
+		FDB51A199D7718CDA247113E /* SessionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2AACB27D32C29077B42235 /* SessionEvent.swift */; };
 		FE446D51518928263A688740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C7C5C27EAF69D9E60CD252C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D2B3BA7D457C57E459D79827 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F576F1A5849D09776A4DEF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D2A6F5F9FDD541548F60288;
+			remoteInfo = HoopTrack;
+		};
 		F80BB043829A31189B89C420 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1F576F1A5849D09776A4DEF0 /* Project object */;
@@ -42,8 +62,8 @@
 		189BC6A2C29CFDEED51D1F63 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
 			files = (
 				762E146DB03DA584E3E87D99 /* HoopTrack Watch App.app in Embed Watch Content */,
 			);
@@ -54,21 +74,30 @@
 
 /* Begin PBXFileReference section */
 		02A967000260F47EFD00A52D /* HoopTrack Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HoopTrack Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05C4637FE31ACFE4292079BA /* WorkoutRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRecorder.swift; sourceTree = "<group>"; };
 		0EEEFD73C235B05C449A78AE /* HoopTrackWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoopTrackWatchApp.swift; sourceTree = "<group>"; };
-		142293D4442724FA552B5270 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
+		16BC40A1D8A0E00CECA73273 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
+		1B4DBF43209F9554837B706F /* LiveWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveWorkout.swift; sourceTree = "<group>"; };
 		1CCA0C514AB84F603E67255C /* ShotResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotResult.swift; sourceTree = "<group>"; };
+		1EDD6DC3C10FD8FCC54A8C37 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		20E05ED03A0D5A70BF51F41F /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		2B4CB84CE52CE6A8736318D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2F9993BF8DC48879449148F6 /* StatFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatFormat.swift; sourceTree = "<group>"; };
+		576B01C16A0BF50ECC8F7DCB /* WorkoutSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionTests.swift; sourceTree = "<group>"; };
 		5C04185C9E761666A1A1429E /* HoopTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoopTrackApp.swift; sourceTree = "<group>"; };
+		625C46A0473E5E51E4F39CF1 /* HoopTrackTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HoopTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75E9EC408AE5BB778DBA7B68 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		78621F9DF076B0507E9D26CC /* HoopTrack.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HoopTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8610980118D01C2613AD6F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C7C5C27EAF69D9E60CD252C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BECE34B40264723D2D8E3A17 /* ShotEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotEvent.swift; sourceTree = "<group>"; };
 		CDB8048C191382C77FFEF104 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D27C279211BFC305702F0CF5 /* LiveSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSessionView.swift; sourceTree = "<group>"; };
+		D55DBA1DBB3E6E793B2C3068 /* WorkoutSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSession.swift; sourceTree = "<group>"; };
 		D7EA50F5B04D8EA8157B6B4A /* InputSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSource.swift; sourceTree = "<group>"; };
 		DAFE69A7C43A0B69480DA0CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E15C45D0C98E9E5625DCAF14 /* WorkoutType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutType.swift; sourceTree = "<group>"; };
-		EBC90AA4BDABEC1A4FC9FF53 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
+		ED2AACB27D32C29077B42235 /* SessionEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -76,9 +105,12 @@
 			isa = PBXGroup;
 			children = (
 				8610980118D01C2613AD6F19 /* Assets.xcassets */,
-				EBC90AA4BDABEC1A4FC9FF53 /* ConnectivityManager.swift */,
 				CDB8048C191382C77FFEF104 /* ContentView.swift */,
+				1EDD6DC3C10FD8FCC54A8C37 /* HomeView.swift */,
 				5C04185C9E761666A1A1429E /* HoopTrackApp.swift */,
+				D27C279211BFC305702F0CF5 /* LiveSessionView.swift */,
+				75E9EC408AE5BB778DBA7B68 /* SummaryView.swift */,
+				05C4637FE31ACFE4292079BA /* WorkoutRecorder.swift */,
 			);
 			path = HoopTrack;
 			sourceTree = "<group>";
@@ -88,6 +120,7 @@
 			children = (
 				02A967000260F47EFD00A52D /* HoopTrack Watch App.app */,
 				78621F9DF076B0507E9D26CC /* HoopTrack.app */,
+				625C46A0473E5E51E4F39CF1 /* HoopTrackTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				D7EA50F5B04D8EA8157B6B4A /* InputSource.swift */,
+				1B4DBF43209F9554837B706F /* LiveWorkout.swift */,
 				BECE34B40264723D2D8E3A17 /* ShotEvent.swift */,
 				1CCA0C514AB84F603E67255C /* ShotResult.swift */,
 				20E05ED03A0D5A70BF51F41F /* Workout.swift */,
@@ -104,11 +138,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		483F3764779FBD67377127ED /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				16BC40A1D8A0E00CECA73273 /* ConnectivityManager.swift */,
+				ED2AACB27D32C29077B42235 /* SessionEvent.swift */,
+				2F9993BF8DC48879449148F6 /* StatFormat.swift */,
+				D55DBA1DBB3E6E793B2C3068 /* WorkoutSession.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		6FD4B2E697E82AD435F5ABCB /* HoopTrack Watch App */ = {
 			isa = PBXGroup;
 			children = (
 				8C7C5C27EAF69D9E60CD252C /* Assets.xcassets */,
-				142293D4442724FA552B5270 /* ConnectivityManager.swift */,
 				DAFE69A7C43A0B69480DA0CF /* ContentView.swift */,
 				0EEEFD73C235B05C449A78AE /* HoopTrackWatchApp.swift */,
 				2B4CB84CE52CE6A8736318D0 /* Info.plist */,
@@ -120,8 +164,17 @@
 			isa = PBXGroup;
 			children = (
 				3AF77EDDE222219E43BC1916 /* Models */,
+				483F3764779FBD67377127ED /* Session */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		D185DEEE15B982CEA121FBD7 /* HoopTrackTests */ = {
+			isa = PBXGroup;
+			children = (
+				576B01C16A0BF50ECC8F7DCB /* WorkoutSessionTests.swift */,
+			);
+			path = HoopTrackTests;
 			sourceTree = "<group>";
 		};
 		F99ED776A6EE1214CB2DE423 = {
@@ -129,6 +182,7 @@
 			children = (
 				113B9ABD0258A5253F7088E1 /* HoopTrack */,
 				6FD4B2E697E82AD435F5ABCB /* HoopTrack Watch App */,
+				D185DEEE15B982CEA121FBD7 /* HoopTrackTests */,
 				77E7D9206622B04280A2DE74 /* Shared */,
 				15F6D62FA2F9102F5463A7ED /* Products */,
 			);
@@ -137,6 +191,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		16F6BC636A885E65D7F5B4B6 /* HoopTrackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F44A45845467F4EC8D460EF1 /* Build configuration list for PBXNativeTarget "HoopTrackTests" */;
+			buildPhases = (
+				DF189D9E8A94C0E3EAE19E00 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FABAD700373F58E1CC3C1AE9 /* PBXTargetDependency */,
+			);
+			name = HoopTrackTests;
+			packageProductDependencies = (
+			);
+			productName = HoopTrackTests;
+			productReference = 625C46A0473E5E51E4F39CF1 /* HoopTrackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3D2A6F5F9FDD541548F60288 /* HoopTrack */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68221FCCC1FC3C5D00DE17E3 /* Build configuration list for PBXNativeTarget "HoopTrack" */;
@@ -182,8 +254,11 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 2660;
 				TargetAttributes = {
+					16F6BC636A885E65D7F5B4B6 = {
+						ProvisioningStyle = Automatic;
+					};
 					3D2A6F5F9FDD541548F60288 = {
 						ProvisioningStyle = Automatic;
 					};
@@ -207,6 +282,7 @@
 			projectRoot = "";
 			targets = (
 				3D2A6F5F9FDD541548F60288 /* HoopTrack */,
+				16F6BC636A885E65D7F5B4B6 /* HoopTrackTests */,
 				42C6A645AF51E3C96C2CF847 /* HoopTrack Watch App */,
 			);
 		};
@@ -236,13 +312,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C500A92A93A10F41ECED60B /* ConnectivityManager.swift in Sources */,
+				A2DE92F4EE2BBA102AE8930D /* ConnectivityManager.swift in Sources */,
 				A3A9BCEACB1ACB43CF1ADF9F /* ContentView.swift in Sources */,
 				56CCFD0B5D6F817B1E18CCE9 /* HoopTrackWatchApp.swift in Sources */,
 				1F8D4D195836413C9177D6CF /* InputSource.swift in Sources */,
+				1BF7E29B467C9825197E2762 /* LiveWorkout.swift in Sources */,
+				84D97F74B79BD46E507ECAEF /* SessionEvent.swift in Sources */,
 				5A966F0630C994CFBFB530C7 /* ShotEvent.swift in Sources */,
 				B190A2869C2B91AFF4753411 /* ShotResult.swift in Sources */,
+				BA9155C59C063236DEF36F4F /* StatFormat.swift in Sources */,
 				703F72D76495A7BF6E3C8D6E /* Workout.swift in Sources */,
+				4D161A8ECF08230386CDF8BE /* WorkoutSession.swift in Sources */,
 				E5B453F9B17DDB322CA2A22A /* WorkoutType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,14 +331,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2BDCE6070E4DFF80F821980 /* ConnectivityManager.swift in Sources */,
+				B92AB7A415A34256B9221236 /* ConnectivityManager.swift in Sources */,
 				394F2BA9E2DCD0FB0E8EE5A9 /* ContentView.swift in Sources */,
+				D0E5CC909DD533E56289F0D5 /* HomeView.swift in Sources */,
 				A9BEA013ACE3350BE4026C69 /* HoopTrackApp.swift in Sources */,
 				17BC4645EC9BDF032145DEF6 /* InputSource.swift in Sources */,
+				DF2373E272844ABCE9F07CCE /* LiveSessionView.swift in Sources */,
+				C101337D65B247AC6A6946D8 /* LiveWorkout.swift in Sources */,
+				FDB51A199D7718CDA247113E /* SessionEvent.swift in Sources */,
 				FC051FE28CA8257F7E21F6B1 /* ShotEvent.swift in Sources */,
 				1820B6A48D1B6F01311269F5 /* ShotResult.swift in Sources */,
+				26659AC41A9AA4DB1ADB7F23 /* StatFormat.swift in Sources */,
+				36EEF54B210E539541EA47F9 /* SummaryView.swift in Sources */,
 				8DC0F6CE5B7577CD281F9573 /* Workout.swift in Sources */,
+				D1E147E513AC0C42EC4BF941 /* WorkoutRecorder.swift in Sources */,
+				647798458C854DC2CE7EF4E2 /* WorkoutSession.swift in Sources */,
 				735EFA2FD73A3A8541063E7E /* WorkoutType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF189D9E8A94C0E3EAE19E00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32BB8B029107EE32AC55A190 /* WorkoutSessionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +366,32 @@
 			target = 42C6A645AF51E3C96C2CF847 /* HoopTrack Watch App */;
 			targetProxy = F80BB043829A31189B89C420 /* PBXContainerItemProxy */;
 		};
+		FABAD700373F58E1CC3C1AE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D2A6F5F9FDD541548F60288 /* HoopTrack */;
+			targetProxy = D2B3BA7D457C57E459D79827 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3EABC7BB857BBBECEBE1CF5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.3.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hooptrack.HoopTrackTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoopTrack.app/HoopTrack";
+			};
+			name = Debug;
+		};
 		47F63C352C16B326B80B2280 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -321,7 +440,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = "HoopTrack Watch App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BINARY_SOURCE_PATH = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hooptrack.HoopTrack.watchkitapp;
 				SDKROOT = watchos;
@@ -336,6 +458,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -369,10 +492,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -393,6 +518,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -401,11 +527,32 @@
 			};
 			name = Debug;
 		};
+		AB1A47B5E85EE951197D2124 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.3.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hooptrack.HoopTrackTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoopTrack.app/HoopTrack";
+			};
+			name = Release;
+		};
 		C367BB2A18C2FD1F4F631667 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = "HoopTrack Watch App/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BINARY_SOURCE_PATH = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hooptrack.HoopTrack.watchkitapp;
 				SDKROOT = watchos;
@@ -420,6 +567,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -453,10 +601,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -470,6 +620,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -504,6 +655,15 @@
 			buildConfigurations = (
 				47F63C352C16B326B80B2280 /* Debug */,
 				5EB86C8CFC5506B4F60A15A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F44A45845467F4EC8D460EF1 /* Build configuration list for PBXNativeTarget "HoopTrackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EABC7BB857BBBECEBE1CF5C /* Debug */,
+				AB1A47B5E85EE951197D2124 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

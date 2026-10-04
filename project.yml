@@ -1,5 +1,8 @@
 name: HoopTrack
 
+attributes:
+  LastUpgradeCheck: "2660"
+
 options:
   bundleIdPrefix: com.hooptrack
   deploymentTarget:
@@ -17,7 +20,11 @@ settings:
     CURRENT_PROJECT_VERSION: "1"
     ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
     ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: YES
     SWIFT_EMIT_LOC_STRINGS: YES
+    STRING_CATALOG_GENERATE_SYMBOLS: YES
+    DEAD_CODE_STRIPPING: YES
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
 
 targets:
   HoopTrack:
@@ -40,6 +47,22 @@ targets:
     dependencies:
       - target: HoopTrack Watch App
         embed: true
+    scheme:
+      testTargets:
+        - HoopTrackTests
+
+  HoopTrackTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "26.3.1"
+    sources:
+      - path: HoopTrackTests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.hooptrack.HoopTrackTests
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - target: HoopTrack
 
   HoopTrack Watch App:
     type: application.watchapp2
@@ -54,7 +77,9 @@ targets:
         TARGETED_DEVICE_FAMILY: "4"
         SDKROOT: watchos
         SKIP_INSTALL: YES
-        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks"
+        LD_RUNPATH_SEARCH_PATHS:
+          - "$(inherited)"
+          - "@executable_path/Frameworks"
         # A static Info.plist (not GENERATE_INFOPLIST_FILE) because Xcode's
         # synthesizer unconditionally force-adds the legacy WKWatchKitApp key
         # for this product type, which conflicts with WKApplication and makes
