@@ -16,4 +16,10 @@ enum StatFormat {
     static func percent(_ fraction: Double) -> String {
         "\(Int((fraction * 100).rounded()))%"
     }
+
+    /// "+5 pts" / "-3 pts" from a 0...1 difference between two percentages.
+    static func signedPoints(_ change: Double) -> String {
+        let points = Int((change * 100).rounded())
+        return "\(points > 0 ? "+" : "")\(points) pts"
+    }
 }
