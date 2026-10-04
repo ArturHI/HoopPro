@@ -52,6 +52,24 @@ Each `Workout` has `date`, `duration`, `workoutType`, `totalMakes`,
 `totalAttempts`, `shootingPct` (0–1), `bestStreak`, and `shots`.
 Workouts with zero shots are not saved.
 
+## Gestures (Watch only)
+
+`GestureDetector.shared` logs shots by itself during a workout; views don't
+need to do anything. For a settings or debug screen it exposes:
+
+| Property | Meaning |
+|---|---|
+| `isEnabled` (settable) | Whether gestures log shots |
+| `sensitivity` (settable) | `.low`, `.medium`, `.high` |
+| `isInverted` (settable) | Swaps make and miss |
+| `isAvailable` | `false` in the simulator (no motion sensors) |
+| `latest` | Live rotation rates (`x`, `y`, `z`, `rollRate`) |
+| `lastDetection`, `lastDetectionDate` | The most recent gesture seen |
+
+A screen that shows `latest` outside a workout must call
+`detector.begin(.debug)` on appear and `detector.end(.debug)` on disappear.
+See `GestureDebugView.swift`.
+
 ## Helpers
 
 - `StatFormat.percent(0.667)` → `"67%"`, `StatFormat.clock(247)` → `"4:07"`
