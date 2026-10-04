@@ -21,13 +21,19 @@ struct HomeView: View {
     @ObservedObject private var connectivity = ConnectivityManager.shared
 
     var body: some View {
-        VStack {
-            Text("HoopTrack")
-            Button("Start Workout") {
-                session.start(type: .freeShoot)
-            }
-            Text(connectivity.isReachable ? "iPhone Connected" : "iPhone Not Reachable")
+        NavigationStack {
+            VStack {
+                Text("HoopTrack")
+                Button("Start Workout") {
+                    session.start(type: .freeShoot)
+                }
+                Text(connectivity.isReachable ? "iPhone Connected" : "iPhone Not Reachable")
+                    .font(.caption2)
+                NavigationLink("Gesture Debug") {
+                    GestureDebugView()
+                }
                 .font(.caption2)
+            }
         }
     }
 }
