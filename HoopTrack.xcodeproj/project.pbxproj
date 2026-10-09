@@ -39,6 +39,7 @@
 		960886B5DD4D31A71D850A54 /* VideoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967E8787C28AC7D233EEAA9 /* VideoStore.swift */; };
 		A2DE92F4EE2BBA102AE8930D /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC40A1D8A0E00CECA73273 /* ConnectivityManager.swift */; };
 		A3A9BCEACB1ACB43CF1ADF9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFE69A7C43A0B69480DA0CF /* ContentView.swift */; };
+		A751EBCFFE50CC1A7882598E /* WorkoutRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D164D3B55BBA6AC3CB63531 /* WorkoutRuntime.swift */; };
 		A9BEA013ACE3350BE4026C69 /* HoopTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04185C9E761666A1A1429E /* HoopTrackApp.swift */; };
 		AC05AD3E1C058E3BF9DA0000 /* GestureClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7653DDD03F17152F774211 /* GestureClassifierTests.swift */; };
 		B190A2869C2B91AFF4753411 /* ShotResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCA0C514AB84F603E67255C /* ShotResult.swift */; };
@@ -103,6 +104,8 @@
 		20E05ED03A0D5A70BF51F41F /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		2B4CB84CE52CE6A8736318D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2F9993BF8DC48879449148F6 /* StatFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatFormat.swift; sourceTree = "<group>"; };
+		3D164D3B55BBA6AC3CB63531 /* WorkoutRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRuntime.swift; sourceTree = "<group>"; };
+		54DAE3E6AFDB8FACD0E47C4A /* HoopTrack Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HoopTrack Watch App.entitlements"; sourceTree = "<group>"; };
 		576B01C16A0BF50ECC8F7DCB /* WorkoutSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionTests.swift; sourceTree = "<group>"; };
 		5C04185C9E761666A1A1429E /* HoopTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoopTrackApp.swift; sourceTree = "<group>"; };
 		625C46A0473E5E51E4F39CF1 /* HoopTrackTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HoopTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,8 +207,10 @@
 				DAFE69A7C43A0B69480DA0CF /* ContentView.swift */,
 				7887F2ED848FE3F6CEACA568 /* GestureDebugView.swift */,
 				02AB08B102CB02C0D399612A /* GestureDetector.swift */,
+				54DAE3E6AFDB8FACD0E47C4A /* HoopTrack Watch App.entitlements */,
 				0EEEFD73C235B05C449A78AE /* HoopTrackWatchApp.swift */,
 				2B4CB84CE52CE6A8736318D0 /* Info.plist */,
+				3D164D3B55BBA6AC3CB63531 /* WorkoutRuntime.swift */,
 			);
 			path = "HoopTrack Watch App";
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				B190A2869C2B91AFF4753411 /* ShotResult.swift in Sources */,
 				BA9155C59C063236DEF36F4F /* StatFormat.swift in Sources */,
 				703F72D76495A7BF6E3C8D6E /* Workout.swift in Sources */,
+				A751EBCFFE50CC1A7882598E /* WorkoutRuntime.swift in Sources */,
 				4D161A8ECF08230386CDF8BE /* WorkoutSession.swift in Sources */,
 				E5B453F9B17DDB322CA2A22A /* WorkoutType.swift in Sources */,
 			);
@@ -512,6 +518,7 @@
 		8BE0B67189CF0443A64AC825 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "HoopTrack Watch App/HoopTrack Watch App.entitlements";
 				INFOPLIST_FILE = "HoopTrack Watch App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -622,6 +629,7 @@
 		C367BB2A18C2FD1F4F631667 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "HoopTrack Watch App/HoopTrack Watch App.entitlements";
 				INFOPLIST_FILE = "HoopTrack Watch App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

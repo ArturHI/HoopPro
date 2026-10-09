@@ -120,6 +120,11 @@ need to do anything. For a settings or debug screen it exposes:
 | `latest` | Live rotation rates (`x`, `y`, `z`, `rollRate`) |
 | `lastDetection`, `lastDetectionDate` | The most recent gesture seen |
 
+`WorkoutRuntime.shared.state` says whether gestures keep working with the
+wrist down: `.running` during a workout once Health permission is granted,
+`.unavailable(reason)` if not (gestures then need the screen on), `.idle`
+otherwise.
+
 A screen that shows `latest` outside a workout must call
 `detector.begin(.debug)` on appear and `detector.end(.debug)` on disappear.
 See `GestureDebugView.swift`.

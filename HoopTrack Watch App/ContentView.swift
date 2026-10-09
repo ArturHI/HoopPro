@@ -41,6 +41,7 @@ struct HomeView: View {
 struct LiveSessionView: View {
     let workout: LiveWorkout
     @ObservedObject private var session = WorkoutSession.shared
+    @ObservedObject private var runtime = WorkoutRuntime.shared
 
     var body: some View {
         ScrollView {
@@ -60,6 +61,13 @@ struct LiveSessionView: View {
                 Button("Undo") { session.undo() }
                     .disabled(workout.lastShot == nil)
                 Button("End", role: .destructive) { session.end() }
+                if case .unavailable = runtime.state {
+                    Text("Gestures need the screen on")
+                        .font(.caption2)
+                } else if runtime.state == .running {
+                    Text("Wrist-down gestures on")
+                        .font(.caption2)
+                }
             }
         }
     }

@@ -17,14 +17,22 @@ struct HoopTrackWatchApp: App {
         connectivity.activate()
         session.requestSync()
 
-        // Gestures only register while a workout is running.
+        // Gestures only register while a workout is running; the workout
+        // session keeps them running with the wrist down.
+        let runtime = WorkoutRuntime.shared
         let detector = GestureDetector.shared
         detector.onGesture = { session.logShot($0, source: .watchGesture) }
         workoutObserver = session.$workout
             .map { $0 != nil }
             .removeDuplicates()
             .sink { isActive in
-                if isActive { detector.begin(.workout) } else { detector.end(.workout) }
+                if isActive {
+                    detector.begin(.workout)
+                    Task { await runtime.begin() }
+                } else {
+                    detector.end(.workout)
+                    runtime.end()
+                }
             }
     }
 

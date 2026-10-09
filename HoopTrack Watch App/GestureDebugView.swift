@@ -3,6 +3,7 @@ import SwiftUI
 // Placeholder: live rotation values for tuning gestures on a real Watch.
 struct GestureDebugView: View {
     @ObservedObject private var detector = GestureDetector.shared
+    @ObservedObject private var runtime = WorkoutRuntime.shared
 
     var body: some View {
         List {
@@ -19,6 +20,14 @@ struct GestureDebugView: View {
                     Text("Last: \(result == .made ? "MAKE" : "MISS") at \(date, format: .dateTime.hour().minute().second())")
                 } else {
                     Text("Last: none")
+                }
+            }
+
+            Section("Wrist-down running") {
+                switch runtime.state {
+                case .idle: Text("Starts with a workout")
+                case .running: Text("Running")
+                case .unavailable(let reason): Text("Off: \(reason)")
                 }
             }
 

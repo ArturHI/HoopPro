@@ -10,6 +10,8 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>HoopTrack</string>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
@@ -22,6 +24,14 @@
 	<true/>
 	<key>WKCompanionAppBundleIdentifier</key>
 	<string>com.arturhi.HoopTrack</string>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>workout-processing</string>
+	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>HoopTrack runs a workout session so wrist gestures keep working when your wrist is down. It does not read any health data.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>HoopTrack runs a workout session so wrist gestures keep working when your wrist is down. It does not save anything to Health.</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
