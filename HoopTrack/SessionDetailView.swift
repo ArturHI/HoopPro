@@ -16,11 +16,15 @@ struct SessionDetailView: View {
                 LabeledContent("Duration", value: StatFormat.clock(workout.duration))
             }
 
-            Section("Shots") {
-                ForEach(workout.orderedShots) { shot in
-                    LabeledContent("#\(shot.shotNumber)", value: shot.result == .made ? "Make" : "Miss")
+            if let videoURL = workout.videoURL {
+                Section {
+                    NavigationLink("Review Video") {
+                        VideoReviewView(workout: workout, videoURL: videoURL)
+                    }
                 }
             }
+
+            ShotListSection(workout: workout)
         }
         .navigationTitle("Workout")
     }

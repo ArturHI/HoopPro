@@ -15,8 +15,14 @@ struct HoopTrackApp: App {
         let session = WorkoutSession.shared
         let connectivity = ConnectivityManager.shared
         session.send = { connectivity.send($0) }
+        let recorder = VideoRecorder.shared
+        session.onStart = { workout in
+            guard recorder.isEnabled else { return }
+            Task { await recorder.startRecording(workoutID: workout.id) }
+        }
         session.onFinish = { [container] workout, endDate in
-            WorkoutRecorder.save(workout, endDate: endDate, in: container.mainContext)
+            let video = recorder.stopRecording()
+            WorkoutRecorder.save(workout, endDate: endDate, video: video, in: container.mainContext)
         }
         connectivity.onEvent = { session.handle($0) }
         connectivity.activate()

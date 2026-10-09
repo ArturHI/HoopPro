@@ -16,7 +16,7 @@ Observe it with `@ObservedObject private var session = WorkoutSession.shared`.
 
 | Call | Effect |
 |---|---|
-| `session.start(type:)` | Starts a workout on both devices |
+| `session.start(type:)` | Starts a workout on both devices (and video, if its toggle is on) |
 | `session.logMake()` / `session.logMiss()` | Logs a shot |
 | `session.undo()` | Removes the most recent shot (from either device) |
 | `session.end()` | Ends the workout, shows the summary, saves it on the iPhone |
@@ -70,6 +70,41 @@ let stats = ProgressStats(workouts: workouts, type: .freeThrow)  // one type
 
 Best shooting percentage only counts workouts with at least 10 shots.
 See `TrendsView.swift`, `HistoryView.swift` and `SessionDetailView.swift`.
+
+## Video (iPhone only)
+
+`VideoRecorder.shared` records the back camera during a workout when its
+toggle is on. Recording starts and stops with the workout by itself.
+
+| Property | Meaning |
+|---|---|
+| `isEnabled` (settable) | The pre-workout "record video" toggle |
+| `quality` (settable) | `.hd720`, `.hd1080`, `.uhd4K` |
+| `isCameraAvailable` | `false` in the simulator |
+| `state` | `.idle`, `.starting`, `.recording`, `.failed(reason)` |
+| `captureSession` | Pass to `CameraPreview(session:)` to show the camera picture |
+
+To show a preview before the workout, call `await recorder.prepare()` when
+the toggle turns on and `recorder.shutDown()` when it turns off (see
+`HomeView.swift`). `VideoSettings.shotOffset` is how many seconds before a
+logged shot the video jumps to (default 4).
+
+After a recorded workout: `workout.videoURL` is the file (or `nil`), and each
+shot has `videoTimestamp` in seconds. Seek an `AVPlayer` there to jump to the
+shot; see `VideoReviewView.swift`.
+
+## Correcting shots (iPhone only)
+
+```swift
+workout.setResult(.made, for: shot)     // or .missed
+workout.setExcluded(true, for: shot)    // "not a shot"; false restores it
+try? modelContext.save()
+```
+
+Both update the workout's stats straight away. A changed shot has
+`corrected == true` and `originalResult` set; an excluded shot has
+`isExcluded == true`, stays in `orderedShots`, and counts toward nothing.
+`ShotListSection(workout:)` is a ready-made list with these controls.
 
 ## Gestures (Watch only)
 
