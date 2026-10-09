@@ -11,7 +11,7 @@ struct LiveSessionView: View {
             switch recorder.state {
             case .recording:
                 Text("● Recording")
-                CameraPreview(session: recorder.captureSession)
+                CameraPreview(layer: recorder.previewLayer)
                     .frame(height: 160)
             case .starting:
                 Text("Starting camera…")

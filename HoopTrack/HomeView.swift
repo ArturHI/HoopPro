@@ -20,7 +20,7 @@ struct HomeView: View {
                     Toggle("Record video", isOn: $recorder.isEnabled)
                         .disabled(!recorder.isCameraAvailable)
                     if recorder.isEnabled {
-                        CameraPreview(session: recorder.captureSession)
+                        CameraPreview(layer: recorder.previewLayer)
                             .frame(height: 200)
                         if case .failed(let reason) = recorder.state {
                             Text(reason)
@@ -67,6 +67,10 @@ struct HomeView: View {
                 }
             }
             .navigationTitle("HoopTrack")
+            .task {
+                // Coming back from a workout with the toggle still on: restart the preview.
+                if recorder.isEnabled { await recorder.prepare() }
+            }
         }
     }
 }
