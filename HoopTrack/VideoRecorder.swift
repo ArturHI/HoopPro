@@ -45,7 +45,9 @@ final class VideoRecorder: NSObject, ObservableObject {
     @Published private(set) var state = State.idle
 
     /// Hand this to `CameraPreview` to show what the camera sees.
-    nonisolated let captureSession = AVCaptureSession()
+    let previewLayer: AVCaptureVideoPreviewLayer
+
+    private nonisolated let captureSession = AVCaptureSession()
 
     var isCameraAvailable: Bool { camera != nil }
 
@@ -60,6 +62,8 @@ final class VideoRecorder: NSObject, ObservableObject {
 
     private override init() {
         quality = UserDefaults.standard.string(forKey: Self.qualityKey).flatMap(VideoQuality.init) ?? .hd1080
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.videoGravity = .resizeAspect
         super.init()
     }
 
@@ -152,8 +156,12 @@ final class VideoRecorder: NSObject, ObservableObject {
         let session = captureSession
         let output = output
         queue.async {
-            if output.isRecording { output.stopRecording() }
-            if session.isRunning { session.stopRunning() }
+            if output.isRecording {
+                // The camera is stopped once the file has finished writing.
+                output.stopRecording()
+            } else if session.isRunning {
+                session.stopRunning()
+            }
         }
         if state == .starting || state == .recording { state = .idle }
     }
@@ -192,8 +200,16 @@ extension VideoRecorder: AVCaptureFileOutputRecordingDelegate {
                 if !finished {
                     VideoStore.discard(outputFileURL)
                     if self.current?.url == outputFileURL { self.current = nil }
-                    self.state = .failed("Recording stopped unexpectedly")
+                }
+                if self.activeWorkoutID != nil {
+                    // Ended while the workout is still going: say so instead of showing "recording".
+                    self.state = .failed(finished ? "Recording stopped early" : "Recording stopped unexpectedly")
                     UIApplication.shared.isIdleTimerDisabled = false
+                } else {
+                    let session = self.captureSession
+                    self.queue.async {
+                        if session.isRunning, !output.isRecording { session.stopRunning() }
+                    }
                 }
             }
         }

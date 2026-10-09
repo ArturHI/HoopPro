@@ -82,7 +82,7 @@ toggle is on. Recording starts and stops with the workout by itself.
 | `quality` (settable) | `.hd720`, `.hd1080`, `.uhd4K` |
 | `isCameraAvailable` | `false` in the simulator |
 | `state` | `.idle`, `.starting`, `.recording`, `.failed(reason)` |
-| `captureSession` | Pass to `CameraPreview(session:)` to show the camera picture |
+| `previewLayer` | Pass to `CameraPreview(layer:)` to show the camera picture |
 
 To show a preview before the workout, call `await recorder.prepare()` when
 the toggle turns on and `recorder.shutDown()` when it turns off (see
