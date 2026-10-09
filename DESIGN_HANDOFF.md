@@ -123,7 +123,9 @@ need to do anything. For a settings or debug screen it exposes:
 `WorkoutRuntime.shared.state` says whether gestures keep working with the
 wrist down: `.running` during a workout once Health permission is granted,
 `.unavailable(reason)` if not (gestures then need the screen on), `.idle`
-otherwise.
+otherwise. It is switched off in the project for now and always reports
+`.unavailable`, because a free Apple account cannot sign HealthKit; see the
+note in `project.yml`.
 
 A screen that shows `latest` outside a workout must call
 `detector.begin(.debug)` on appear and `detector.end(.debug)` on disappear.

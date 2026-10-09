@@ -22,6 +22,10 @@ final class WorkoutRuntime: NSObject, ObservableObject {
     private var wantsRunning = false
 
     func begin() async {
+        #if !HEALTHKIT_ENABLED
+        // Built without the HealthKit entitlement (see project.yml).
+        state = .unavailable("Needs a paid Apple Developer account")
+        #else
         wantsRunning = true
         guard session == nil else { return }
         guard HKHealthStore.isHealthDataAvailable() else {
@@ -46,6 +50,7 @@ final class WorkoutRuntime: NSObject, ObservableObject {
         } catch {
             state = .unavailable(error.localizedDescription)
         }
+        #endif
     }
 
     func end() {

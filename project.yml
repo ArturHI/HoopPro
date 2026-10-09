@@ -73,13 +73,18 @@ targets:
     sources:
       - path: HoopTrack Watch App
       - path: Shared
-    entitlements:
-      path: HoopTrack Watch App/HoopTrack Watch App.entitlements
-      properties:
-        com.apple.developer.healthkit: true
+    # Wrist-down gestures use a HealthKit workout session, and free "Personal
+    # Team" accounts cannot sign the HealthKit entitlement. With a paid Apple
+    # Developer account, uncomment this block and the HEALTHKIT_ENABLED line
+    # below, then run `xcodegen generate`.
+    # entitlements:
+    #   path: HoopTrack Watch App/HoopTrack Watch App.entitlements
+    #   properties:
+    #     com.apple.developer.healthkit: true
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.arturhi.HoopTrack.watchkitapp
+        # SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) HEALTHKIT_ENABLED"
         TARGETED_DEVICE_FAMILY: "4"
         SDKROOT: watchos
         SKIP_INSTALL: YES
