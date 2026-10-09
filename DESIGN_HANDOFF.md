@@ -50,7 +50,26 @@ TimelineView(.periodic(from: .now, by: 1)) { context in
 
 Each `Workout` has `date`, `duration`, `workoutType`, `totalMakes`,
 `totalAttempts`, `shootingPct` (0–1), `bestStreak`, and `shots`.
-Workouts with zero shots are not saved.
+Workouts with zero shots are not saved. Also on each workout: `totalMisses`
+and `orderedShots` (each shot has `shotNumber`, `result`, `inputSource`).
+
+## Progress and dashboard numbers (iPhone only)
+
+```swift
+let stats = ProgressStats(workouts: workouts)            // everything
+let stats = ProgressStats(workouts: workouts, type: .freeThrow)  // one type
+```
+
+| Property | Meaning |
+|---|---|
+| `trend` | One point per workout, oldest first: `date`, `shootingPct`, `attempts` |
+| `today`, `thisWeek`, `lastWeek`, `allTime` | Totals: `workouts`, `makes`, `misses`, `attempts`, `shootingPct`, `duration` |
+| `weekOverWeekChange` | This week minus last week (fraction); `nil` unless both have shots |
+| `latestVsPrevious` | `latestPct`, `previousPct`, `change`; `nil` with fewer than two workouts |
+| `bestShootingPct`, `longestStreak`, `mostMakes` | Personal bests, each with `value`, `date`, `workoutID`; `nil` until set |
+
+Best shooting percentage only counts workouts with at least 10 shots.
+See `TrendsView.swift`, `HistoryView.swift` and `SessionDetailView.swift`.
 
 ## Gestures (Watch only)
 
@@ -72,7 +91,8 @@ See `GestureDebugView.swift`.
 
 ## Helpers
 
-- `StatFormat.percent(0.667)` → `"67%"`, `StatFormat.clock(247)` → `"4:07"`
+- `StatFormat.percent(0.667)` → `"67%"`, `StatFormat.clock(247)` → `"4:07"`,
+  `StatFormat.signedPoints(0.05)` → `"+5 pts"`
 - `WorkoutType.allCases` and `.displayName` for the type picker
 - `ConnectivityManager.shared.isReachable` for a connection indicator
 

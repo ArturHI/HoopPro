@@ -21,17 +21,28 @@ struct HomeView: View {
                     }
                 }
 
+                Section("Today") {
+                    let today = ProgressStats(workouts: workouts).today
+                    if today.attempts == 0 {
+                        Text("No shots today")
+                    } else {
+                        Text("\(today.makes)/\(today.attempts) · \(StatFormat.percent(today.shootingPct)) · \(today.workouts) workouts")
+                    }
+                }
+
                 Section("Recent") {
                     if workouts.isEmpty {
                         Text("No workouts yet")
                     }
-                    ForEach(workouts) { workout in
-                        VStack(alignment: .leading) {
-                            Text(workout.workoutType.displayName)
-                            Text("\(workout.totalMakes)/\(workout.totalAttempts) · \(StatFormat.percent(workout.shootingPct)) · \(StatFormat.clock(workout.duration))")
-                            Text(workout.date, format: .dateTime.month().day().hour().minute())
+                    ForEach(workouts.prefix(3)) { workout in
+                        NavigationLink {
+                            SessionDetailView(workout: workout)
+                        } label: {
+                            WorkoutRow(workout: workout)
                         }
                     }
+                    NavigationLink("All History") { HistoryView() }
+                    NavigationLink("Progress") { TrendsView() }
                 }
 
                 Section {
