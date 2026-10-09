@@ -4,6 +4,7 @@ import SwiftData
 struct HomeView: View {
     @ObservedObject private var session = WorkoutSession.shared
     @ObservedObject private var connectivity = ConnectivityManager.shared
+    @ObservedObject private var recorder = VideoRecorder.shared
     @Query(sort: \Workout.date, order: .reverse) private var workouts: [Workout]
     @State private var workoutType: WorkoutType = .freeShoot
 
@@ -16,8 +17,24 @@ struct HomeView: View {
                             Text(type.displayName).tag(type)
                         }
                     }
+                    Toggle("Record video", isOn: $recorder.isEnabled)
+                        .disabled(!recorder.isCameraAvailable)
+                    if recorder.isEnabled {
+                        CameraPreview(session: recorder.captureSession)
+                            .frame(height: 200)
+                        if case .failed(let reason) = recorder.state {
+                            Text(reason)
+                        }
+                    }
                     Button("Start Workout") {
                         session.start(type: workoutType)
+                    }
+                }
+                .onChange(of: recorder.isEnabled) { _, isOn in
+                    if isOn {
+                        Task { await recorder.prepare() }
+                    } else {
+                        recorder.shutDown()
                     }
                 }
 

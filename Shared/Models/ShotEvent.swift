@@ -12,6 +12,8 @@ final class ShotEvent {
     var originalResult: ShotResult?
     var shotType: String?
     var aiConfidence: Double?
+    /// Marked "not a shot" during review: kept in the list, left out of the stats.
+    var isExcluded: Bool = false
 
     init(
         id: UUID = UUID(),

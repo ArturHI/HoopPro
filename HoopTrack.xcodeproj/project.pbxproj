@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06CBE1C6902F7B2EAD74C06D /* VideoReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B8228A8EC1D9DC4FF08963 /* VideoReviewView.swift */; };
 		124A851C864927F5FB55783B /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD2F7E11C728F491EFB96ED /* HistoryView.swift */; };
 		17BC4645EC9BDF032145DEF6 /* InputSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EA50F5B04D8EA8157B6B4A /* InputSource.swift */; };
 		1820B6A48D1B6F01311269F5 /* ShotResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCA0C514AB84F603E67255C /* ShotResult.swift */; };
@@ -14,9 +15,12 @@
 		1F8D4D195836413C9177D6CF /* InputSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EA50F5B04D8EA8157B6B4A /* InputSource.swift */; };
 		26659AC41A9AA4DB1ADB7F23 /* StatFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9993BF8DC48879449148F6 /* StatFormat.swift */; };
 		27C0DB2F43042512BC422F9F /* GestureClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0573F870FD633D266DB16F0 /* GestureClassifier.swift */; };
+		27E15274561241D957E2A22E /* VideoAndCorrectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9FBD148EDDAEA24278C8C4 /* VideoAndCorrectionTests.swift */; };
 		32BB8B029107EE32AC55A190 /* WorkoutSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576B01C16A0BF50ECC8F7DCB /* WorkoutSessionTests.swift */; };
+		361A95C8A1F06FF0E0B03A9F /* VideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D586A5BA6161E480E76CAE /* VideoRecorder.swift */; };
 		36EEF54B210E539541EA47F9 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E9EC408AE5BB778DBA7B68 /* SummaryView.swift */; };
 		394F2BA9E2DCD0FB0E8EE5A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB8048C191382C77FFEF104 /* ContentView.swift */; };
+		4AC2A1C1DD481919FF45F5EE /* ShotCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA037D44F6E3D1CB3AB8D3EF /* ShotCorrection.swift */; };
 		4D161A8ECF08230386CDF8BE /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DBA1DBB3E6E793B2C3068 /* WorkoutSession.swift */; };
 		564F17B738B0FAC87CD6F088 /* SessionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D32A38D79B6ADDAF76326EC /* SessionDetailView.swift */; };
 		56CCFD0B5D6F817B1E18CCE9 /* HoopTrackWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEEFD73C235B05C449A78AE /* HoopTrackWatchApp.swift */; };
@@ -27,10 +31,12 @@
 		703F72D76495A7BF6E3C8D6E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E05ED03A0D5A70BF51F41F /* Workout.swift */; };
 		735EFA2FD73A3A8541063E7E /* WorkoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15C45D0C98E9E5625DCAF14 /* WorkoutType.swift */; };
 		762E146DB03DA584E3E87D99 /* HoopTrack Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 02A967000260F47EFD00A52D /* HoopTrack Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7D45B6333835C7C73281EF16 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F44B1416776F954CD395FC6 /* CameraPreview.swift */; };
 		84D97F74B79BD46E507ECAEF /* SessionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2AACB27D32C29077B42235 /* SessionEvent.swift */; };
 		8DC0F6CE5B7577CD281F9573 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E05ED03A0D5A70BF51F41F /* Workout.swift */; };
 		8F0ECE4A71C5F34ADDFBD7BD /* ProgressStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = D872D6121FA43290D87777A4 /* ProgressStats.swift */; };
 		93CD5F3A38C54C77EE7516FF /* TrendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72ACFC8802CA2514F84EA4 /* TrendsView.swift */; };
+		960886B5DD4D31A71D850A54 /* VideoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967E8787C28AC7D233EEAA9 /* VideoStore.swift */; };
 		A2DE92F4EE2BBA102AE8930D /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BC40A1D8A0E00CECA73273 /* ConnectivityManager.swift */; };
 		A3A9BCEACB1ACB43CF1ADF9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFE69A7C43A0B69480DA0CF /* ContentView.swift */; };
 		A9BEA013ACE3350BE4026C69 /* HoopTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04185C9E761666A1A1429E /* HoopTrackApp.swift */; };
@@ -88,6 +94,7 @@
 		05C4637FE31ACFE4292079BA /* WorkoutRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRecorder.swift; sourceTree = "<group>"; };
 		0D32A38D79B6ADDAF76326EC /* SessionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailView.swift; sourceTree = "<group>"; };
 		0EEEFD73C235B05C449A78AE /* HoopTrackWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoopTrackWatchApp.swift; sourceTree = "<group>"; };
+		0F44B1416776F954CD395FC6 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 		0F7653DDD03F17152F774211 /* GestureClassifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureClassifierTests.swift; sourceTree = "<group>"; };
 		16BC40A1D8A0E00CECA73273 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
 		1B4DBF43209F9554837B706F /* LiveWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveWorkout.swift; sourceTree = "<group>"; };
@@ -99,12 +106,16 @@
 		576B01C16A0BF50ECC8F7DCB /* WorkoutSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionTests.swift; sourceTree = "<group>"; };
 		5C04185C9E761666A1A1429E /* HoopTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoopTrackApp.swift; sourceTree = "<group>"; };
 		625C46A0473E5E51E4F39CF1 /* HoopTrackTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HoopTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6967E8787C28AC7D233EEAA9 /* VideoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStore.swift; sourceTree = "<group>"; };
 		6DD2F7E11C728F491EFB96ED /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		75E9EC408AE5BB778DBA7B68 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		78621F9DF076B0507E9D26CC /* HoopTrack.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HoopTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7887F2ED848FE3F6CEACA568 /* GestureDebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureDebugView.swift; sourceTree = "<group>"; };
 		8610980118D01C2613AD6F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C7C5C27EAF69D9E60CD252C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99B8228A8EC1D9DC4FF08963 /* VideoReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReviewView.swift; sourceTree = "<group>"; };
+		A6D586A5BA6161E480E76CAE /* VideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecorder.swift; sourceTree = "<group>"; };
+		AA037D44F6E3D1CB3AB8D3EF /* ShotCorrection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotCorrection.swift; sourceTree = "<group>"; };
 		BECE34B40264723D2D8E3A17 /* ShotEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotEvent.swift; sourceTree = "<group>"; };
 		CDB8048C191382C77FFEF104 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE72ACFC8802CA2514F84EA4 /* TrendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsView.swift; sourceTree = "<group>"; };
@@ -115,6 +126,7 @@
 		D872D6121FA43290D87777A4 /* ProgressStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStats.swift; sourceTree = "<group>"; };
 		DAFE69A7C43A0B69480DA0CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E15C45D0C98E9E5625DCAF14 /* WorkoutType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutType.swift; sourceTree = "<group>"; };
+		EA9FBD148EDDAEA24278C8C4 /* VideoAndCorrectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAndCorrectionTests.swift; sourceTree = "<group>"; };
 		ED2AACB27D32C29077B42235 /* SessionEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEvent.swift; sourceTree = "<group>"; };
 		F573F7E06F3DAEC4B2D84D02 /* ProgressStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStatsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				8610980118D01C2613AD6F19 /* Assets.xcassets */,
+				0F44B1416776F954CD395FC6 /* CameraPreview.swift */,
 				CDB8048C191382C77FFEF104 /* ContentView.swift */,
 				6DD2F7E11C728F491EFB96ED /* HistoryView.swift */,
 				1EDD6DC3C10FD8FCC54A8C37 /* HomeView.swift */,
@@ -131,8 +144,12 @@
 				D27C279211BFC305702F0CF5 /* LiveSessionView.swift */,
 				D872D6121FA43290D87777A4 /* ProgressStats.swift */,
 				0D32A38D79B6ADDAF76326EC /* SessionDetailView.swift */,
+				AA037D44F6E3D1CB3AB8D3EF /* ShotCorrection.swift */,
 				75E9EC408AE5BB778DBA7B68 /* SummaryView.swift */,
 				CE72ACFC8802CA2514F84EA4 /* TrendsView.swift */,
+				A6D586A5BA6161E480E76CAE /* VideoRecorder.swift */,
+				99B8228A8EC1D9DC4FF08963 /* VideoReviewView.swift */,
+				6967E8787C28AC7D233EEAA9 /* VideoStore.swift */,
 				05C4637FE31ACFE4292079BA /* WorkoutRecorder.swift */,
 			);
 			path = HoopTrack;
@@ -208,6 +225,7 @@
 			children = (
 				0F7653DDD03F17152F774211 /* GestureClassifierTests.swift */,
 				F573F7E06F3DAEC4B2D84D02 /* ProgressStatsTests.swift */,
+				EA9FBD148EDDAEA24278C8C4 /* VideoAndCorrectionTests.swift */,
 				576B01C16A0BF50ECC8F7DCB /* WorkoutSessionTests.swift */,
 			);
 			path = HoopTrackTests;
@@ -373,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D45B6333835C7C73281EF16 /* CameraPreview.swift in Sources */,
 				B92AB7A415A34256B9221236 /* ConnectivityManager.swift in Sources */,
 				394F2BA9E2DCD0FB0E8EE5A9 /* ContentView.swift in Sources */,
 				27C0DB2F43042512BC422F9F /* GestureClassifier.swift in Sources */,
@@ -385,11 +404,15 @@
 				8F0ECE4A71C5F34ADDFBD7BD /* ProgressStats.swift in Sources */,
 				564F17B738B0FAC87CD6F088 /* SessionDetailView.swift in Sources */,
 				FDB51A199D7718CDA247113E /* SessionEvent.swift in Sources */,
+				4AC2A1C1DD481919FF45F5EE /* ShotCorrection.swift in Sources */,
 				FC051FE28CA8257F7E21F6B1 /* ShotEvent.swift in Sources */,
 				1820B6A48D1B6F01311269F5 /* ShotResult.swift in Sources */,
 				26659AC41A9AA4DB1ADB7F23 /* StatFormat.swift in Sources */,
 				36EEF54B210E539541EA47F9 /* SummaryView.swift in Sources */,
 				93CD5F3A38C54C77EE7516FF /* TrendsView.swift in Sources */,
+				361A95C8A1F06FF0E0B03A9F /* VideoRecorder.swift in Sources */,
+				06CBE1C6902F7B2EAD74C06D /* VideoReviewView.swift in Sources */,
+				960886B5DD4D31A71D850A54 /* VideoStore.swift in Sources */,
 				8DC0F6CE5B7577CD281F9573 /* Workout.swift in Sources */,
 				D1E147E513AC0C42EC4BF941 /* WorkoutRecorder.swift in Sources */,
 				647798458C854DC2CE7EF4E2 /* WorkoutSession.swift in Sources */,
@@ -403,6 +426,7 @@
 			files = (
 				AC05AD3E1C058E3BF9DA0000 /* GestureClassifierTests.swift in Sources */,
 				DB1B2EFF3ED6AB31D023D0A8 /* ProgressStatsTests.swift in Sources */,
+				27E15274561241D957E2A22E /* VideoAndCorrectionTests.swift in Sources */,
 				32BB8B029107EE32AC55A190 /* WorkoutSessionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

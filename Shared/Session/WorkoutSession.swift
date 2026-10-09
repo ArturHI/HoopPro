@@ -16,6 +16,8 @@ final class WorkoutSession: ObservableObject {
     var buttonSource: InputSource
 
     var send: (SessionEvent) -> Void = { _ in }
+    /// Called once whenever a workout begins on this device, whichever side started it.
+    var onStart: ((LiveWorkout) -> Void)?
     /// Called once whenever a workout finishes, however it was ended.
     var onFinish: ((LiveWorkout, Date) -> Void)?
     /// Called for shots logged on this device only (not ones from the peer).
@@ -41,6 +43,7 @@ final class WorkoutSession: ObservableObject {
         lastSummary = nil
         workout = new
         send(.start(new))
+        onStart?(new)
     }
 
     func logMake() { logShot(.made) }
@@ -95,6 +98,7 @@ final class WorkoutSession: ObservableObject {
             }
             lastSummary = nil
             workout = incoming
+            onStart?(incoming)
 
         case .shot(let workoutID, let shot):
             guard var current = workout, current.id == workoutID else { return }
