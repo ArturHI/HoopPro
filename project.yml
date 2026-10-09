@@ -73,6 +73,10 @@ targets:
     sources:
       - path: HoopTrack Watch App
       - path: Shared
+    entitlements:
+      path: HoopTrack Watch App/HoopTrack Watch App.entitlements
+      properties:
+        com.apple.developer.healthkit: true
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.arturhi.HoopTrack.watchkitapp
